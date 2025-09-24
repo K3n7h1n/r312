@@ -47,6 +47,5 @@ jobs:
           port: 22036
           script: |
             cd /var/www/r312/server
-            npm ci
-            npm install send server-destroy
+            npm install --production
             PORT=8082 pm2 start -f entry.mjs
